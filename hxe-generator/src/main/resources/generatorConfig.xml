@@ -1,0 +1,56 @@
+<context schema="ice_seed">
+
+	<jdbcConnection driverClass="com.mysql.jdbc.Driver"
+					connectionURL="jdbc:mysql://10.168.1.201/ice_seed?characterEncoding=utf8"
+					uName="root" password="111111" />
+
+	<!-- 数据类型 -->	
+	<javaTypeResolver>
+		<property name="int" value="Integer" />
+		<property name="tinyint" value="Integer" />
+		<property name="bigint" value="Long" />
+		<property name="char" value="String" />
+		<property name="varchar" value="String" />
+		<property name="text" value="String" />
+		<property name="float" value="Float" />
+		<property name="double" value="Double" />
+		<property name="decimal" value="Double" />
+		<property name="smallint" value="Integer" />
+		<property name="timestamp" value="Date" />
+		<property name="datetime" value="Date" />
+		<property name="bit" value="Boolean" />
+	</javaTypeResolver>
+
+	<!--继承base类-->
+	<extendsBase>
+		<property name="dto" value="com.hxe.common.persistence.Query" />
+		<property name="mapper" value="com.hxe.common.persistence.Mapper" />
+		<property name="service" value="com.hxe.common.service.IBaseService" />
+		<property name="serviceImpl" value="com.hxe.common.service.impl.BaseServiceImpl" />
+	</extendsBase>
+
+	<!--需要引入的包-->
+	<importClasses>
+		<property name="dto">
+			<import value="com.hxe.common.persistence.criteria.QueryCriteria"/>
+		</property>
+	</importClasses>
+	<!-- 表 -->
+	<!-- 测试表开始 -->
+	<table tableName="tb_token" domainObjectName="Token"
+		   packageName="com.hxe.core.user" desc="用户Token" author="luxor">
+		<generatedKey column="id" identity="true" />
+		<dto packageName="com.hxe.core.user.query" />
+	</table>
+	<!-- 测试表结束 -->
+	
+	<!-- 测试表开始 -->
+	<table tableName="tb_user" domainObjectName="User"
+		   packageName="com.hxe.core.user" desc="用户" author="luxor">
+		<generatedKey column="id" identity="true" />
+		<dto packageName="com.hxe.core.user.query" />
+	</table>
+	<!-- 测试表结束 -->
+	
+
+</context>

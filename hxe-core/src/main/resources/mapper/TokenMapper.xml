@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.hxe.core.user.mapper.TokenMapper" >
+  
+    <!-- ������ѯ��� -->
+	<sql id="selectSql">
+		select 
+		    <trim suffixOverrides="," >
+		    	a.`id` as 'id',
+		    	a.`token` as 'token',
+		    	a.`expire_time` as 'expireTime',
+		    	a.`update_time` as 'updateTime',
+		    </trim>
+	   	from 
+	    	`tb_token` as a
+	</sql>
+  
+</mapper>

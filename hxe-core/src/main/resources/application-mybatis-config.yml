@@ -1,0 +1,6 @@
+mybatis:
+  type-aliases-package: com.hxe.core.entity
+  mapper-locations: classpath:mapper/*.xml
+mapper:
+  identity: MYSQL
+  mappers: com.hxe.common.persistence.Mapper
