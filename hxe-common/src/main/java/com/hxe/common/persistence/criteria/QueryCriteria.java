@@ -1,6 +1,8 @@
 package com.hxe.common.persistence.criteria;
 
 import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 import tk.mybatis.mapper.entity.Example;
 
 /**
@@ -9,7 +11,8 @@ import tk.mybatis.mapper.entity.Example;
  * @version : v0.0.1
  * @since : 2018/10/24
  */
-@Data
+@Setter
+@Getter
 public class QueryCriteria extends Example {
 
     /*是否只查一条*/

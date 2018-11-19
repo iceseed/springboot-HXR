@@ -4,7 +4,7 @@ spring:
     type: com.alibaba.druid.pool.DruidDataSource
     driverClassName: com.mysql.jdbc.Driver
     druid:
-      url: jdbc:mysql://10.168.1.201/ice_seed?allowMultiQueries=true&useUnicode=true&characterEncoding=UTF-8
+      url: jdbc:mysql://iceseed.vicp.net:53783/ice_seed?allowMultiQueries=true&useUnicode=true&characterEncoding=UTF-8
       username: root
       password: 111111
       initial-size: 10

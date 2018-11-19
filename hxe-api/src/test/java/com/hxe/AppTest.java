@@ -22,7 +22,7 @@ public class AppTest {
     @Test
     public void contextLoads() {
         TokenQuery query = new TokenQuery();
-        query.setId(1L);;
+        query.setId(1L);
         UserQuery userquery = new UserQuery();
         userquery.setId(1L);;
         System.out.println("aaaaaaaaaaaaaaaaaaaaaaaaa");
